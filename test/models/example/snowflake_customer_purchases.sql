@@ -1,6 +1,5 @@
-{{ config(materialized='table') }}
 
-SELECT 
+SELECT
     c.c_custkey,
     c.c_name,
     c.c_nationkey as nation,

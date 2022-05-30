@@ -26,3 +26,6 @@ models:
         tests:
           - unique
           - not_null
+  - name: cumulative_orders_by_date
+    description: "Cumulative sum of purchase"
+  - name: dates
