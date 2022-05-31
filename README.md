@@ -72,3 +72,30 @@ $ use DATABASE MINI_ASSIGNMENT
 $ use SCHEMA DBT
 ```
 - From here I could use `PUT` and `COPY` commands to upload data to Snowflake
+- Example,
+``` 
+put file:///C:/src/split/badges/*.xml @xmy_stage_badges
+copy into badges_xml from @xmy_stage_badges
+```
+- This venture would take a lot of time (to `PUT` into staging and then `COPY` to the XML table)
+
+### 5. Back to snowflake
+
+- Back in snowflake, I would now create a table for the data I just copied into it's XML table, like
+```SQL
+create table BADGES (
+  Id INTEGER,
+  Name varchar,
+  Date datetime,
+  Class INTEGER,
+  Tag_based boolean,
+  user_id INTEGER
+);
+```
+- Next, I would insert into the `BADGES` table from `BADGES_XML` using the `insert` command like,
+
+```SQL
+insert into BADGES (Id, Name, Date, Class, Tag_Based, user_id) 
+select src_xml:"@Id", src_xml:"@Name", src_xml:"@Date", src_xml:"@Class", src_xml:"@TagBased", src_xml:"@UserId" from badges_xml
+```
+- Here, I found how to use the "$", "@" and "@attribute_name" after reading the docs [@snowflake](https://docs.snowflake.com/en/sql-reference/functions/xmlget.html#usage-notes)
