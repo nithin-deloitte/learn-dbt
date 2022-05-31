@@ -145,3 +145,33 @@ from users as u, posts as p
 where u.REPUTATION >= 75000
 order by u.reputation desc
 ```
+
+### 8. DBT queries
+
+- same queries as above, but mapped to a view, using
+```{{ config(materialized='view') }}```
+- Created files in `models/assignment`
+- Updated `schema.yml`
+- Added `not_null` and `unique` tests in yml file
+
+```terminal
+19:36:34  Running with dbt=1.1.0
+19:36:34  Found 7 models, 14 tests, 0 snapshots, 0 analyses, 181 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+19:36:34  
+19:36:39  Concurrency: 1 threads (target='dev')
+19:36:39  
+19:36:39  1 of 7 START view model dbt.fifth .............................................. [RUN]
+19:36:42  1 of 7 OK created view model dbt.fifth ......................................... [SUCCESS 1 in 2.82s]
+19:36:42  2 of 7 START view model dbt.first .............................................. [RUN]
+19:36:44  2 of 7 OK created view model dbt.first ......................................... [SUCCESS 1 in 2.32s]
+19:36:44  3 of 7 START view model dbt.fourth ............................................. [RUN]
+19:36:47  3 of 7 OK created view model dbt.fourth ........................................ [SUCCESS 1 in 2.76s]
+19:36:47  4 of 7 START table model dbt.my_first_dbt_model ................................ [RUN]
+19:36:52  4 of 7 OK created table model dbt.my_first_dbt_model ........................... [SUCCESS 1 in 5.35s]
+19:36:52  5 of 7 START view model dbt.second ............................................. [RUN]
+19:36:55  5 of 7 OK created view model dbt.second ........................................ [SUCCESS 1 in 2.76s]
+19:36:55  6 of 7 START view model dbt.third .............................................. [RUN]
+19:36:59  6 of 7 OK created view model dbt.third ......................................... [SUCCESS 1 in 3.77s]
+19:36:59  7 of 7 START view model dbt.my_second_dbt_model ................................ [RUN]
+19:37:03  7 of 7 OK created view model dbt.my_second_dbt_model ........................... [SUCCESS 1 in 3.66s]
+```
