@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: first
+    description: "Find top 10 users with the highest reputation. Print their id, displayname and reputation. Sort by highest reputation first."
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  - name: second
+    description: "Print the text of questions asked by user whose display name is alexandrul."
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  - name: third
+    description: "Print the text of questions asked by user whose display name contains the string 'nau'"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  - name: fourth
+    description: "Print the 10 most popular badges, sorted by the number of users who have these badges. "
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  - name: fifth
+    description: "For users who have a reputation greater than 75000, print their userid, displayname, reputation"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
