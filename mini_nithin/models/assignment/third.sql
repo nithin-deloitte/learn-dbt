@@ -1,7 +1,7 @@
-{{ config(materialized='view') }}
-
+{ { config(materialized = 'view') } }
 select body,
-    u.display_name
+    u.display_name,
+    u.id
 from posts,
     users as u
 where POST_TYPE_ID = 1

@@ -16,7 +16,6 @@ models:
         description: "The primary key for this table"
         tests:
           - unique
-          - not_null
   - name: third
     description: "Print the text of questions asked by user whose display name contains the string 'nau'"
     columns:
@@ -32,12 +31,10 @@ models:
         description: "The primary key for this table"
         tests:
           - unique
-          - not_null
   - name: fifth
     description: "For users who have a reputation greater than 75000, print their userid, displayname, reputation"
     columns:
       - name: id
         description: "The primary key for this table"
         tests:
-          - unique
           - not_null
