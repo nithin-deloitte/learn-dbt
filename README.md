@@ -51,7 +51,7 @@ compression = 'AUTO'
 ;
 ```
 - Then I created the **stage table**
-```
+```sql
 create or replace table badges_xml (
     src_xml variant
 );
@@ -65,7 +65,7 @@ create or replace table badges_xml (
 - I had to login to `snowSQL` on my terminal with the commands,
 - ```snowsql -a pbb85879.us-east-1 -u ninjaasmoke```
 - Then enter the password, and then set up all the required configurations, like
-```snowsql
+```sql
 $ use ROLE TRANSFORM_ROLE
 $ use WAREHOUSE TRANSFORM_WH
 $ use DATABASE MINI_ASSIGNMENT
@@ -84,7 +84,7 @@ copy into badges_xml from @xmy_stage_badges
 - Back in snowflake, I would now create a table for the data I just copied into it's XML table, like
 ```SQL
 create table BADGES (
-  Id INTEGER,
+  Id INTEGER PRIMARY KEY,
   Name varchar,
   Date datetime,
   Class INTEGER,
@@ -102,3 +102,42 @@ select src_xml:"@Id", src_xml:"@Name", src_xml:"@Date", src_xml:"@Class", src_xm
 
 ### 6. Repeat
 - I did the same for all the files in the zip
+
+### 7. SQL queries
+
+- Now I had to complete the assignment by adding the sql queries.
+
+**REPUTATION**
+Find top 10 users with the highest reputation. Print their id, displayname and reputation. Sort by highest reputation first. 
+```SQL
+select id, display_name, reputation from users order by reputation desc limit 10
+```
+
+**QUESTIONS**
+Print the text of questions asked by user whose display name is alexandrul.  
+```SQL
+select body, owner_user_id from posts, users as u where POST_TYPE_ID=1 AND owner_user_id=u.id AND display_name='alexandrul'
+```
+
+**QUESTIONS_LIKE**
+Print the text of questions asked by user whose display name contains the string “nau” 
+```SQL
+select body, u.display_name from posts, users as u where POST_TYPE_ID=1 AND owner_user_id=u.id AND u.display_name LIKE '%nau%'
+```
+
+**MOST POPULAR BADGES**
+Print the 10 most popular badges, sorted by the number of users who have these badges. 
+```SQL
+select name, count(*) from badges group by name order by count(*) desc limit 10
+```
+
+**QUESTIONCOUNT**
+For users who have a reputation greater than 75000, print their userid, displayname, reputation and the total number of questions they have asked.  
+```sql
+select
+    u.id, u.display_name, u.reputation
+from users as u, posts as p
+where u.REPUTATION >= 75000
+order by u.reputation desc
+```
+```
