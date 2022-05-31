@@ -140,4 +140,3 @@ from users as u, posts as p
 where u.REPUTATION >= 75000
 order by u.reputation desc
 ```
-```
