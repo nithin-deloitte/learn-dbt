@@ -44,3 +44,29 @@ Happy modeling!
 05:36:53.280027 [debug] [MainThread]: On debug: No close available on handle
 05:36:53.283016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C5B947CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C5B947940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C5B9479A0>]}
 05:36:54.414692 [debug] [MainThread]: Connection 'debug' was properly closed.
+
+
+============================== 2022-05-31 18:26:50.960045 | 3c147234-2b77-4357-86e4-802404a2d989 ==============================
+18:26:50.960045 [info ] [MainThread]: Running with dbt=1.1.0
+18:26:50.968054 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\nsaikj\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+18:26:50.968788 [debug] [MainThread]: Tracking: tracking
+18:26:51.338020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027947C0B190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027947C0ADA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027947C0B0D0>]}
+18:27:05.103430 [debug] [MainThread]: Starter project path: C:\Users\nsaikj\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\include\starter_project
+18:28:08.557404 [info ] [MainThread]: Profile mini_nithin written to C:\Users\nsaikj\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+18:28:08.565417 [info ] [MainThread]: 
+Your new dbt project "mini_nithin" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+18:28:08.570833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027947C084C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027947C08700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027947C08A60>]}
