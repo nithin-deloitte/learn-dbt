@@ -107,31 +107,36 @@ select src_xml:"@Id", src_xml:"@Name", src_xml:"@Date", src_xml:"@Class", src_xm
 
 - Now I had to complete the assignment by adding the sql queries.
 
-**REPUTATION**
+**REPUTATION**\
 Find top 10 users with the highest reputation. Print their id, displayname and reputation. Sort by highest reputation first. 
 ```SQL
 select id, display_name, reputation from users order by reputation desc limit 10
 ```
+<br />
 
-**QUESTIONS**
+**QUESTIONS**\
 Print the text of questions asked by user whose display name is alexandrul.  
 ```SQL
 select body, owner_user_id from posts, users as u where POST_TYPE_ID=1 AND owner_user_id=u.id AND display_name='alexandrul'
 ```
 
-**QUESTIONS_LIKE**
+<br />
+
+**QUESTIONS_LIKE**\
 Print the text of questions asked by user whose display name contains the string “nau” 
 ```SQL
 select body, u.display_name from posts, users as u where POST_TYPE_ID=1 AND owner_user_id=u.id AND u.display_name LIKE '%nau%'
 ```
 
-**MOST POPULAR BADGES**
+<br />
+
+**MOST POPULAR BADGES**\
 Print the 10 most popular badges, sorted by the number of users who have these badges. 
 ```SQL
 select name, count(*) from badges group by name order by count(*) desc limit 10
 ```
 
-**QUESTIONCOUNT**
+**QUESTIONCOUNT**\
 For users who have a reputation greater than 75000, print their userid, displayname, reputation and the total number of questions they have asked.  
 ```sql
 select
