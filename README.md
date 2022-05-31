@@ -99,3 +99,6 @@ insert into BADGES (Id, Name, Date, Class, Tag_Based, user_id)
 select src_xml:"@Id", src_xml:"@Name", src_xml:"@Date", src_xml:"@Class", src_xml:"@TagBased", src_xml:"@UserId" from badges_xml
 ```
 - Here, I found how to use the "$", "@" and "@attribute_name" after reading the docs [@snowflake](https://docs.snowflake.com/en/sql-reference/functions/xmlget.html#usage-notes)
+
+### 6. Repeat
+- I did the same for all the files in the zip
