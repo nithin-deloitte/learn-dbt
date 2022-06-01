@@ -2,6 +2,8 @@
 
 **This markdown file documents the steps I followed to complete this mini assignment**
 
+[Screenshots](#SCREENSHOTS)
+
 ### 1. Download and extract data
 
 - I downloaded the data from the given URL [here](https://archive.org/download/stackexchange/askubuntu.com.7z).
@@ -175,3 +177,35 @@ order by u.reputation desc
 19:36:59  7 of 7 START view model dbt.my_second_dbt_model ................................ [RUN]
 19:37:03  7 of 7 OK created view model dbt.my_second_dbt_model ........................... [SUCCESS 1 in 3.66s]
 ```
+
+
+### SCREENSHOTS
+
+#### Q1
+![image](https://user-images.githubusercontent.com/104750177/171436719-5e69a5c8-4f41-432e-8910-260d72f73f82.png)
+
+#### Q2
+![image](https://user-images.githubusercontent.com/104750177/171436856-ba0bf3f4-ee7a-456f-90cc-0fdc05a7b221.png)
+
+*PS: I got no data for the display name 'alexandrul'. I checked it manually, using the ID, and it was not existent*
+
+![image](https://user-images.githubusercontent.com/104750177/171437221-8cf2d991-c51d-491c-9398-d97d1c66d8d1.png)
+
+#### Q3
+![image](https://user-images.githubusercontent.com/104750177/171437295-7a9ff5bf-638b-4986-a8e4-a86275a410dc.png)
+
+#### Q4
+![image](https://user-images.githubusercontent.com/104750177/171437342-d5417dc7-67c2-42f2-bd2f-4705f08ad7a5.png)
+
+#### Q5
+![image](https://user-images.githubusercontent.com/104750177/171438215-71fd61a7-180b-4cf8-8be1-91b627ea4eb4.png)
+
+#### Python Script
+![image](https://user-images.githubusercontent.com/104750177/171438459-1968a1c0-ed2d-4c36-97b5-476b21b7fd6b.png)
+
+
+#### Python split data storage
+![image](https://user-images.githubusercontent.com/104750177/171438634-0bf306ce-ead5-4c3a-b3d4-291e0dab1487.png)
+
+#### Example: Badges
+![image](https://user-images.githubusercontent.com/104750177/171438843-aa99da23-ee53-4b57-9ebe-622192cda66b.png)
