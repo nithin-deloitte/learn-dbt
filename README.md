@@ -6,8 +6,8 @@
 
 ### 1. Download and extract data
 
-- I downloaded the data from the given URL [here](https://archive.org/download/stackexchange/askubuntu.com.7z).
-- Second I extracted the data into a common location in my computer
+1. I downloaded the data from the given URL [here](https://archive.org/download/stackexchange/askubuntu.com.7z).
+2. I extracted the data into a common location in my computer
 
 *Note: I first tried to uplaod data from xml files directly via the UI, 
 then tried to use `Talend` to upload the large data files to Snowflake, 
